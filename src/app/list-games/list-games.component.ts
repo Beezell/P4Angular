@@ -9,18 +9,18 @@ import { GamesService } from '../services/games.service';
 })
 export class ListGamesComponent implements OnInit{
   
-  games!: any[];
+  games!: Game[];
 
   constructor(private gamesService: GamesService){}
 
   ngOnInit(): void {
-    this.gamesService.getGamesApi().subscribe({
-      next:(data) => {
-        this.games = data
+    this.gamesService.getGamesApi().subscribe(
+      (response: Game[]) => {
+        this.games = response;
       },
-      error:(error) => {
-        console.log("erreur dans le list-games pour afficher data : " + error);
-      } 
-    });
+      (error) => {
+        console.log("Error fetching games from API:", error);
+      }
+    );
   }
 }

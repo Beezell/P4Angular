@@ -1,5 +1,3 @@
 <h1>TRENDY GAMES</h1>
 
-<div *ngFor="let game of games">
-    {{game.name}}
-</div>
+<app-game *ngFor="let game of games" [game]="game"></app-game>

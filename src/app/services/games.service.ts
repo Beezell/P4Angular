@@ -11,10 +11,9 @@ export class GamesService{
 
   constructor(private http : HttpClient){}
 
-   
+  games: Game[] = [];
 
-    getGamesApi() {
-      return this.http.get<any[]>(this.apiUrl)
-    }
-
+  getGamesApi() {
+    return this.http.get<Game[]>(this.apiUrl);
+  }
 }
