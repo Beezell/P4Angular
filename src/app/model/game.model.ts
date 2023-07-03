@@ -15,6 +15,7 @@ export class Game{
     _id!: String;
     name!: String;
     firstDayInTop!: Date;
+    viewersDay!: Number;
     igdbId!: String;
     cover!: String;
     firstReleaseDate!: Date;

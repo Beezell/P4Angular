@@ -14,13 +14,14 @@ export class ListGamesComponent implements OnInit{
   constructor(private gamesService: GamesService){}
 
   ngOnInit(): void {
-    this.gamesService.getGamesApi().subscribe(
-      (response: Game[]) => {
+
+    this.gamesService.getGamesApi().subscribe({
+      next:(response: Game[]) => {
         this.games = response;
       },
-      (error) => {
-        console.log("Error fetching games from API:", error);
+      error:(error) => {
+        console.log("Error sur le fetch du game : " + error);
       }
-    );
+    });
   }
 }
