@@ -9,12 +9,18 @@ import { GamesService } from '../services/games.service';
 })
 export class ListGamesComponent implements OnInit{
   
-  games!: Game[];
+  games!: any[];
 
-  constructor(private gamesServce: GamesService){}
+  constructor(private gamesService: GamesService){}
 
   ngOnInit(): void {
-      this.games = this.gamesServce.getAllGames();
+    this.gamesService.getGamesApi().subscribe({
+      next:(data) => {
+        this.games = data
+      },
+      error:(error) => {
+        console.log("erreur dans le list-games pour afficher data : " + error);
+      } 
+    });
   }
-
 }

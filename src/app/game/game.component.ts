@@ -10,6 +10,6 @@ import { GamesService } from '../services/games.service';
 export class GameComponent {
   @Input() game!: Game;
 
-  constructor(private gamesService: GamesService){}
+  constructor(){}
 
 }
