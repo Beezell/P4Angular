@@ -9,6 +9,7 @@ import { ListGamesComponent } from './list-games/list-games.component';
 import { GameComponent } from './game/game.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { ListAccountsComponent } from './list-accounts/list-accounts.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ListGamesComponent,
     GameComponent,
-    FooterComponent
+    FooterComponent,
+    ListAccountsComponent
   ],
   imports: [
     BrowserModule,

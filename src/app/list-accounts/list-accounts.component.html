@@ -1,0 +1,19 @@
+<h1>Accounts</h1>
+
+
+<table >
+  <tr>
+    <th>ID</th>
+    <th>USERNAME</th>
+    <th>PASSWORD</th>
+  </tr>
+  <tr *ngFor="let account of accounts" >
+    <td>{{ account.id }}</td>
+    <td>{{ account.username }}</td>
+    <td>{{ account.password }}</td>
+    <td>
+      <button (click)="deleteAccount(account.id)">Delete</button>
+    </td>
+  </tr>
+  </table>
+

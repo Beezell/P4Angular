@@ -7,11 +7,14 @@ import { HttpClient } from "@angular/common/http";
 })
 export class GamesService{
 
-  private apiUrl = "http://localhost:3000/api/games-by-viewers";
+  private apiUrl = "http://localhost:3000/api/";
+  private apiGetByViewer = "games-by-viewers";
+  private apiGetAll = "games";
+  private apiGetSteamGame = "games-steam";
 
   constructor(private http : HttpClient){}
 
-  getGamesApi() {
-    return this.http.get<Game[]>(this.apiUrl);
+  getGamesApiByViewer() {
+    return this.http.get<Game[]>(this.apiUrl + this.apiGetByViewer);
   }
 }

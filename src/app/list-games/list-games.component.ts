@@ -15,12 +15,12 @@ export class ListGamesComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.gamesService.getGamesApi().subscribe({
+    this.gamesService.getGamesApiByViewer().subscribe({
       next:(response: Game[]) => {
         this.games = response;
       },
       error:(error) => {
-        console.log("Error sur le fetch du game : " + error);
+        console.log("Error sur le fetch des games : " + error);
       }
     });
   }
