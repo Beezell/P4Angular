@@ -10,6 +10,7 @@ import { GameComponent } from './game/game.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ListAccountsComponent } from './list-accounts/list-accounts.component';
+import { MinigameComponent } from './minigame/minigame.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ListAccountsComponent } from './list-accounts/list-accounts.component';
     ListGamesComponent,
     GameComponent,
     FooterComponent,
-    ListAccountsComponent
+    ListAccountsComponent,
+    MinigameComponent
   ],
   imports: [
     BrowserModule,
